@@ -61,9 +61,7 @@ class WoodemiService {
     print('params = ${params}');
     print('resultParams = ${resultParams}');
     var uri = Uri.parse(url).replace(queryParameters: resultParams).toString();
-    print('1111');
     var response = await http.get(uri);
-    print('2222');
     return parseJsonData(response.body);
   }
 
