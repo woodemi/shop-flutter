@@ -10,7 +10,7 @@ class ServerManager extends WoodemiService {
   String get userServiceUrl {
     return environment == Environment.sSmartnote
         ? 'http://39.106.100.225/v2'
-        : '';
+        : 'https://36noteservice.woodemi.com/v2';
   }
 
   ServerManager._init() {
