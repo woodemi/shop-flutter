@@ -1,0 +1,13 @@
+# TODO Load property from file
+variables:
+  "WOODEMI_USERNAME": "woodemi-test"
+  "WOODEMI_PASSWORD": "2017Woodemi"
+
+Tests:
+  tags:
+    - flutter
+  stage: test
+  only:
+    - branches
+  script:
+    - flutter test --machine ./test/
