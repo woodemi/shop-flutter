@@ -59,14 +59,6 @@ class _ShopPageState extends State<ShopPage> with WoodemiService {
       onTap: () async {
         if (_activitys.length == 0) return;
         var model = _activitys[0];
-        if (model.id != null && model.id.length > 0) {
-          var openUrl = "taobao://item.taobao.com/item.htm?id=${model.id}";
-          if (await canLaunch(openUrl)) {
-            await launch(openUrl);
-            return;
-          }
-        }
-
         if (model.url != null && model.url.length > 0) {
           if (await canLaunch(model.url)) {
             await launch(model.url);
@@ -124,17 +116,21 @@ class _ShopPageState extends State<ShopPage> with WoodemiService {
             ],
           ),
           onTap: () async {
-            if (model.id != null && model.id.length > 0) {
-              var openUrl = "taobao://item.taobao.com/item.htm?id=${model.id}";
-              if (await canLaunch(openUrl)) {
-                await launch(openUrl);
-                return;
+            var url = '';
+            if (model.gid != null && model.gid.length > 0) {
+              url = "https://item.taobao.com/item.htm?id=${model.gid}";
+              if (url != null && url.length > 0) {
+                if (await canLaunch(url)) {
+                  await launch(url);
+                  return;
+                }
               }
             }
 
-            if (model.url != null && model.url.length > 0) {
-              if (await canLaunch(model.url)) {
-                await launch(model.url);
+            url = model.url;
+            if (url != null && url.length > 0) {
+              if (await canLaunch(url)) {
+                await launch(url);
                 return;
               }
             }
