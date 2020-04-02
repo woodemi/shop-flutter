@@ -16,7 +16,7 @@ description: A new Flutter project.
 # V = X.Y.Z
 # B = XYZM：其中M为2位（不够前面补0）且累加)
 # --------------------------------------
-version: 0.1.0+1001
+version: 0.1.0+1004
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
