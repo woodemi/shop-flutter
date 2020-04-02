@@ -116,18 +116,7 @@ class _ShopPageState extends State<ShopPage> with WoodemiService {
             ],
           ),
           onTap: () async {
-            var url = '';
-            if (model.gid != null && model.gid.length > 0) {
-              url = "https://item.taobao.com/item.htm?id=${model.gid}";
-              if (url != null && url.length > 0) {
-                if (await canLaunch(url)) {
-                  await launch(url);
-                  return;
-                }
-              }
-            }
-
-            url = model.url;
+            var url = model.url;
             if (url != null && url.length > 0) {
               if (await canLaunch(url)) {
                 await launch(url);
