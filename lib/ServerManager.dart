@@ -15,6 +15,6 @@ class ServerManager extends WoodemiService {
 
   ServerManager._init() {
     WoodemiService.clientAgent = ClientAgent.aSmartnoteLight;
-    environment = Environment.sSmartnote;
+    environment = Environment.pSmartnote;
   }
 }
