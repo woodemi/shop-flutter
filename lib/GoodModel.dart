@@ -1,5 +1,5 @@
 class ShopModel {
-  String id;
+  String gid;
   String name;
   String prize;
   String thumb;
@@ -16,7 +16,7 @@ class ShopModel {
   }
 
   ShopModel.fromMap(Map json) {
-    id = json['id'];
+    gid = json['gid'];
     name = json['name'];
     prize = json['prize'];
     thumb = json['thumb'];
